@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hastane Randevu Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        #appointment-table {
+            display: none; /* Tablonun başlangıçta gizli olmasını sağlar */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu-toggle" id="mobile-menu"> 
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar" id="navbar">
+            <li><a href="index.html" class="active">ANASAYFA</a></li>
+            <li><a href="about.html">HAKKIMIZDA</a></li>
+            <li><a href="contact.html">İLETİŞİM</a></li>
+        </ul>
+    </nav>
+    <img src="logo.png" alt="Sağlık Bakanlığı Logo" class="logo">
+    <h1 class="title">Randevunu Al</h1>
+    
+
+    <div class="container">
+        <h1>Hastane Randevu Sistemi</h1>
+        <form id="appointment-form">
+            <div class="form-group">
+                <label for="name">Ad Soyad:</label>
+                <input type="text" id="name" required placeholder="Adınızı ve soyadınızı girin">
+            </div>
+
+            <div class="form-group">
+                <label for="hospital">Hastane:</label> 
+                <select id="hospital" required>
+                    <option value="">Seçiniz</option>
+                    <option value="TınazTepe Hastanesi">TınazTepe Hastanesi</option>
+                    <option value="Torbalı Devlet Hastanesi">Torbalı Devlet Hastanesi </option>
+                    <option value="Bozyaka Eğitim Ve Araştırma Hastanesi">Bozyaka Eğitim Ve Araştırma Hastanesi</option>
+                    <option value="Gazi Hastanesi">Gazi Hastanesi</option>
+                    <option value="Dokuz Eylül Üniversitesi Hastanesi">Dokuz Eylül Üniversitesi Hastanesi</option>
+                    <option value="Egepol Hastanesi">Egepol Hastanesi</option>
+                    <option value="Ege Üniversitesi Tıp Fakültesi Hastanesi">Ege Üniversitesi Tıp Fakültesi Hastanesi</option>
+                    <option value="İzmir Atatürk Eğitim ve Araştırma Hastanesi">İzmir Atatürk Eğitim ve Araştırma Hastanesi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="doctor">Doktor:</label>
+                <select id="doctor" required>
+                    <option value="">Seçiniz</option>
+                    <option value="Dr. Ahmet Yılmaz">Doc. Dr. Ahmet Yılmaz</option>
+                    <option value="Dr. Fatma Demir">Uzm. Dr. Fatma Demir</option>
+                    <option value="Dr. Mehmet Öz">Doc. Dr. Mehmet Öz</option>
+                    <option value="Doc. Dr. Caner Sağlam"> Doc. Dr. Caner Sağlam</option>
+                    <option value="Doc. Dr. Hasan İdil">Doc. Dr. Hasan İdil</option>
+                    <option value="Uzm. Dr. Gülden Gök">Uzm. Dr. Gülden Gök</option>
+                    <option value="Uzm. Dr. Ali Kaan Ataman">Uzm. Dr. Ali Kaan Ataman</option>
+                    <option value="Uzm. Dr. Mertcan Küpcük">Uzm. Dr. Mertcan Küpcük</option>
+                    <option value="Uzm. Dr. Yeşim Eyler">Uzm. Dr. Yeşim Eyler</option>
+                    <option value="Uzm. Dr. Omay Sorgun">Uzm. Dr. Omay Sorgun</option>
+                    <option value="Uzm. Dr. Tayfun Öztürk">Uzm. Dr. Tayfun Öztürk</option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Randevu Tarihi:</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Randevu Saati:</label>
+                <input type="time" id="time" required>
+            </div>
+            <button type="submit">Randevu Al</button>
+        </form>
+
+        <h2>Randevular</h2>
+        <table id="appointment-table">
+            <thead>
+                <tr>
+                    <th>Ad Soyad</th>
+                    <th>Hastane</th>
+                    <th>Doktor</th>
+                    <th>Tarih</th>
+                    <th> Saat</th>
+                </tr>
+            </thead>
+            <tbody id="appointment-list"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

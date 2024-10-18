@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    color: black !important;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgba(52, 152, 219, 0.9); /* Arka plan rengi ve saydamlık */
+    padding: 10px; /* Padding */
+    position: fixed; /* Sayfanın en altında sabit kalması için */
+    bottom: 0; /* Sayfanın altına yerleştir */
+    left: 0; /* Sol tarafa yasla */
+    width: 100%; /* Tam genişlik */
+    display: flex; /* Flexbox kullanarak içeriği hizala */
+    justify-content: flex-start; /* Sol tarafa hizala */
+    border-radius: 5px 5px 0 0; /* Sadece alt köşeleri yuvarla */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Üstte gölge */
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start; /* Sol tarafa hizala */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin-right: 20px; /* Öğeler arasında boşluk */
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 14px; /* Küçük font boyutu */
+}
+
+.menu-toggle {
+    display: none; /* Başlangıçta gizli */
+}
+
+/* Mobil görünüm için */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none; /* Mobilde başlangıçta gizli */
+        flex-direction: column;
+        width: 100%;
+        background-color: #3498db;
+        position: absolute;
+        top: 60px; /* Menü açıldığında aşağıda kalması için */
+        left: 0;
+    }
+
+    .navbar.active {
+        display: flex; /* Aktif olduğunda görünür hale gelsin */
+    }
+
+    .menu-toggle {
+        display: flex; /* Mobilde göster */
+    }
+}
+.header {
+    display: flex;
+    align-items: center; 
+    padding: 10px; 
+}
+
+.logo {
+    height: 100px; /* Logo yüksekliğini ayarlar */
+    margin-right: 10px; 
+}
+.header {
+    display: flex;
+    align-items: center; /* Dikey ortalamak için */
+    padding: 10px; /* Üstten boşluk */
+}
+
+.logo {
+    height: 100px; /* Logo yüksekliği */
+    margin-right: 10px; /* Logonun sağında boşluk */
+}
+
+.title {
+    font-size: 30px; /* Yazı boyutu */
+    color: #ffffff; /* Yazı rengi */
+    background: linear-gradient(90deg, #000207e3, #0011ff); /* Yazı Rengi Ayarlama */
+    -webkit-background-clip: text; /* Arka planı yazıya klipler */
+    -webkit-text-fill-color: transparent; /* Yazı rengini saydam yapar */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Yazıya gölge ekler */
+    margin-left: 10px; 
+    font-weight: bold; /* Kalın yazı */
+    letter-spacing: 2px; /* Harfler arası boşluk */
+}
+
+
+nav {
+    background-color: rgb(91, 233, 252);
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+nav {
+    background-color: rgba(39, 35, 253, 0.932); /* navbar rengini ayarlama */
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #34495e;
+}
+
+.form-group {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, select {
+    width: calc(100% - 16px);
+    padding: 12px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2125f0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #2980b9;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr {
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+body {
+    background-image: url('arkaplann.jpg'); /* Arka plan */
+    background-size: cover; /* Resmi tam ekran yapar */
+    background-position: center; /* Resmi ortalar */
+    background-repeat: no-repeat; /* Resmin tekrarlanmasını engeller */
+    color: #fff; /* Yazıları beyaz yapar */
+}
